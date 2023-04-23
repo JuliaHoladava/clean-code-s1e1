@@ -33,7 +33,7 @@ var createNewTaskElement = function(taskString) {
   checkBox.className = "input-checkbox";
 
   editInput.type = "text";
-  editInput.className = "input-text";
+  editInput.className = "input-text task";
 
   editButton.innerText = "Edit";
   editButton.className = "edit-button";
