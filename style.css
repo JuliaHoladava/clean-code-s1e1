@@ -59,6 +59,7 @@ button{
   display: flex;
 }
 
+.add-button,
 .edit-button,
 .save-button,
 .delete-button {
@@ -71,6 +72,7 @@ button{
   cursor: pointer;
 }
 
+.add-button:hover,
 .edit-button:hover,
 .save-button:hover,
 .delete-button:hover {
@@ -89,10 +91,10 @@ button{
   text-transform: uppercase;
 }
 
-.label-new-task {
+.section-margin {
     display: block;
     margin: 0 0 20px;
-  }
+}
 
 .input-text {
   margin: 0;
@@ -161,7 +163,7 @@ button{
 }
 
 /* Edit Task */
-.input-text {
+.item-task .input-text {
   display: none;
 }
 
