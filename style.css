@@ -61,7 +61,6 @@ button{
 
 .add-button,
 .edit-button,
-.save-button,
 .delete-button {
   background: none;
   border: 0px;
@@ -74,7 +73,6 @@ button{
 
 .add-button:hover,
 .edit-button:hover,
-.save-button:hover,
 .delete-button:hover {
   color: #3a3a3a;
 }
