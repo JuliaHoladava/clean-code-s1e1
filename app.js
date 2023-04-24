@@ -5,22 +5,22 @@
 // Event handling
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0];
-var incompleteTaskHolder = document.getElementById("incomplete-tasks");
-var completedTasksHolder = document.getElementById("completed-tasks");
+var incompleteTaskHolder = document.querySelector(".incompleted-list");
+var completedTasksHolder = document.querySelector(".completed-list");
 
 //Create new task list item
 var createNewTaskElement = function(taskString) {
 
   var listItem = document.createElement("li");
-  //input (checkbox)
+
   var checkBox = document.createElement("input");
-  //label
+
   var label = document.createElement("label");
-  //input (text)
+
   var editInput = document.createElement("input");
-  //button.edit
+
   var editButton = document.createElement("button");
-  //button.delete
+
   var deleteButton = document.createElement("button");
   var deleteButtonImg = document.createElement("img");
 
@@ -40,7 +40,7 @@ var createNewTaskElement = function(taskString) {
 
   deleteButton.className = "delete-button";
   deleteButtonImg.src = "./remove.svg";
-  deleteButtonImg.className = "button-img";
+  deleteButtonImg.className = "delete-button__img";
   deleteButton.appendChild(deleteButtonImg);
 
   listItem.appendChild(checkBox);
@@ -48,7 +48,6 @@ var createNewTaskElement = function(taskString) {
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
-  console.log(listItem);
   return listItem;
 }
 
@@ -99,9 +98,12 @@ var deleteTask = function() {
 var taskCompleted = function() {
 
   var listItem = this.parentNode;
+
   var label = listItem.querySelector("label");
 
   completedTasksHolder.appendChild(listItem);
+  listItem.classList.remove("edit-mode");
+  label.classList.remove("label-edit-task");
   label.classList.toggle("completed-label");
   bindTaskEvents(listItem, taskIncomplete);
 }
@@ -120,7 +122,6 @@ var taskIncomplete = function() {
 addButton.onclick = addTask;
 addButton.addEventListener("click",addTask);
 
-//
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler){
 
   var checkBox = taskListItem.querySelector(".input-checkbox");

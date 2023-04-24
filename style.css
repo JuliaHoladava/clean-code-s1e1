@@ -28,11 +28,11 @@ button{
   text-align: right;
 }
 
-.header-img {
+.header__img {
   width: 100%;
 }
 
-.more-info {
+.header__link {
   font-family: fantasy, cursive;
 }
 
@@ -43,7 +43,7 @@ button{
   }
 }
 
-.main-content {
+.container {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -55,7 +55,7 @@ button{
   flex-grow: 1;
 }
 
-.add-item-wrapper {
+.add-form {
   display: flex;
 }
 
@@ -78,7 +78,7 @@ button{
 }
 
 /* Heading */
-.section-heading,
+.heading,
 .label-new-task {
   color: #333;
   font-weight: 700;
@@ -144,13 +144,13 @@ button{
   width: 226px;
 }
 
-.button-img {
+.delete-button__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.button-img:hover {
+.delete-button__img:hover {
   transform: rotateZ(0);
 }
 

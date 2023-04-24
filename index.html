@@ -8,30 +8,30 @@
 </head>
 <body class="page">
   <header class="header">
-    <img class="header-img" src="./eisenhower-matrix.jpg">
-    <a class="more-info" href="https://goal-life.com/page/method/matrix-eisenhower" alt="Promoted image">
+    <img class="header__img" src="./eisenhower-matrix.jpg">
+    <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower" alt="Promoted image">
       Want more details?
     </a>
   </header>
-  <main class="main-content">
-    <section id="add-list-header">
-      <h3 class="section-heading section-margin">Add Item</h3>
-      <form class="add-item-wrapper" action="#">
+  <main class="container">
+    <section>
+      <h3 class="heading section-margin">Add Item</h3>
+      <form class="add-form" action="#">
           <label for="new-task"></label>
           <input id="new-task" class="input-text task" type="text">
           <button class="add-button">Add</button>
       </form>
     </section>
     <section>
-      <h3 class="section-heading">Todo</h3>
-      <ul id="incomplete-tasks">
+      <h3 class="heading">Todo</h3>
+      <ul class="incompleted-list">
         <li class="item-task">
           <input class="input-checkbox" type="checkbox">
           <label class="task">Pay Bills</label>
           <input class="input-text task" type="text">
           <button class="edit-button">Edit</button>
           <button class="delete-button">
-            <img class="button-img" src="./remove.svg" alt="Delete icon">
+            <img class="delete-button__img" src="./remove.svg" alt="Delete icon">
           </button>
         </li>
         <li class="item-task edit-mode">
@@ -40,21 +40,21 @@
           <input class="input-text task" type="text" value="Go Shopping">
           <button class="edit-button">Save</button>
           <button class="delete-button">
-            <img class="button-img" src="./remove.svg" alt="Delete icon">
+            <img class="delete-button__img" src="./remove.svg" alt="Delete icon">
           </button>
         </li>
       </ul>
     </section>
     <section>
-      <h3 class="section-heading">Completed</h3>
-      <ul id="completed-tasks">
+      <h3 class="heading">Completed</h3>
+      <ul class="completed-list">
         <li class="item-task">
           <input class="input-checkbox" type="checkbox" checked>
           <label class="completed-label task">See the Doctor</label>
           <input class="input-text task" type="text">
           <button class="edit-button">Edit</button>
           <button class="delete-button">
-            <img class="button-img" src="./remove.svg" alt="Delete icon">
+            <img class="delete-button__img" src="./remove.svg" alt="Delete icon">
           </button>
         </li>
       </ul>
